@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "release": "lerna publish",
+    "release:force": "lerna publish --force-publish",
+    "test": "lerna exec --scope='{*,**/core}' -- npm run test",
+    "lint": "lerna exec --scope='*' -- npm run lint"
+  },
+  "devDependencies": {
+    "lerna": "^3.4.0"
+  }
+}
